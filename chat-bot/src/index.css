@@ -1,67 +1,93 @@
 .user-chat {
-  width: 500px;
-  height: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f2f2f2;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #ccc;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
 }
 
 .chat-messages {
-  width: 100%;
-  height: 80%;
+  width: 60%;
+  height: 70%;
   overflow-y: scroll;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.user-message {
-  background-color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #ccc;
-  margin-bottom: 10px;
-  align-self: flex-start;
-}
-
-.bot-message {
-  background-color: #b3e5fc;
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px #ccc;
-  margin-bottom: 10px;
-  align-self: flex-end;
-}
-
-form {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-
-input[type="text"] {
-  width: 70%;
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
+.user-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
   margin-right: 10px;
 }
 
-button[type="submit"] {
-  width: 20%;
+.bot-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  animation: appear 0.5s ease;
+}
+
+.user-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  align-self: flex-end;
+  animation: appear 0.5s ease;
+}
+
+p {
+  background-color: #444;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-size: 16px;
+  max-width: 80%;
+}
+
+input[type="text"] {
+  width: 60%;
+  height: 50px;
   padding: 10px;
-  background-color: #2196f3;
+  border: none;
+  border-radius: 20px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button {
+  width: 20%;
+  height: 50px;
+  background-color: #444;
   color: #fff;
   border: none;
   border-radius: 5px;
-  outline: none;
+  font-size: 16px;
+  margin-left: 20px;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+button:active {
+  transform: translateY(3px);
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #444;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background-color: #777;
 }

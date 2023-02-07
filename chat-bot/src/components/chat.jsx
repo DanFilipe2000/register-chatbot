@@ -1,10 +1,20 @@
 import messages from "../helpers/messages";
 
-import { useState, useEffect } from "react";
+import botImg from "../img/bot-img.png";
+import userImg from "../img/person-img.png";
+
+import { useState } from "react";
 
 function messageConstructor (txt, type) {
+    let img = botImg;
+    
+    if (type == 'user') {
+        img = userImg;
+    }
+
     return (
         <div class={`${type}-message`}>
+            <img class="user-img" src={ img } />
             <p>{ txt }</p>
         </div>
     )
