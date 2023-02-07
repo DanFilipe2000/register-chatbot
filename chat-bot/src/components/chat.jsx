@@ -20,6 +20,11 @@ function messageConstructor (txt, type) {
     )
 }
 
+function scrollDown() {
+    let chatMessages = document.querySelector('.chat-messages');
+    window.scrollTo(0, chatMessages);
+}
+
 function Chat () {
     const [userMessage, setUserMessage] = useState('');
 
@@ -45,10 +50,12 @@ function Chat () {
             setBtnDisable(true);
             setUserMessage('');
             setShowMessages([...showMessages, addUserMessage, thankYouMessage])
+            scrollDown();
         } else {
             setUserMessage('');
             setShowMessages([...showMessages, addUserMessage, messages[actualQuestion]])
             setActualQuestion(actualQuestion + 1);
+            scrollDown();
         }
     }
 

@@ -29,7 +29,7 @@
   align-items: center;
   margin-bottom: 20px;
   justify-content: flex-start;
-  animation: appear 0.5s ease;
+  animation: appear 2s ease;
 }
 
 .user-message {
@@ -90,4 +90,19 @@ button:active {
 ::-webkit-scrollbar-thumb {
 border-radius: 10px;
 background-color: #777;
+}
+
+a:hover {
+  background-color: #555;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
